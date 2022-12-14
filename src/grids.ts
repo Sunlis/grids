@@ -1,5 +1,3 @@
-import chalk from 'chalk';
-
 type Pattern = string[];
 
 type Grid = {
@@ -201,13 +199,13 @@ const visualize = (state: CellState[][]) => {
     let line = '';
     row.forEach((cell: CellState) => {
       if (cell == CellState.DUG) {
-        line += chalk.bgWhite(' D ');
+        line += '🟦';
       } else if (cell == CellState.REVEALED) {
-        line += chalk.bgGreen(' R ');
+        line += '🟩';
       } else if (cell == CellState.PARTIAL) {
-        line += chalk.bgCyan(' P ');
+        line += '🟨';
       } else {
-        line += chalk.bgRed(' X ');
+        line += '🟥';
       }
     });
     if (line) console.log(line);
