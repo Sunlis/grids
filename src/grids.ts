@@ -199,11 +199,11 @@ const visualize = (state: CellState[][]) => {
     let line = '';
     row.forEach((cell: CellState) => {
       if (cell == CellState.DUG) {
-        line += '🟦';
+        line += '⬜️';
       } else if (cell == CellState.REVEALED) {
         line += '🟩';
       } else if (cell == CellState.PARTIAL) {
-        line += '🟨';
+        line += '🟧';
       } else {
         line += '🟥';
       }
